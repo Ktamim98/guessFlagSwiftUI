@@ -19,6 +19,9 @@ struct ContentView: View {
     
     @State private var correctAns = Int.random(in: 0...3)
     
+  
+
+
     
     
     var body: some View {
@@ -57,8 +60,11 @@ struct ContentView: View {
                                 .renderingMode(.original)
                                 .clipShape(Capsule())
                                 .shadow(radius: 5)
+                                .rotationEffect(.degrees(showingScore && number == correctAns ? 360 : 0))
+                                .rotation3DEffect(.degrees(showingScore && number != correctAns ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                            
                         }
-                        
+                     
                     }
                    
                 }
@@ -95,11 +101,16 @@ struct ContentView: View {
         if number == correctAns{
             showingTitle = "Correct"
             score += 1
+            
+            
+            
+            
         }else{
             showingTitle = "Wrong!"
             score -= 1
             
             showingTitle = "Wrong! That's the flag of \(countries[number])."
+               
         }
         showingScore = true
     }
