@@ -3,6 +3,8 @@ This is a simple guessing game built with SwiftUI. The game shows three flags on
 The game consists of eight rounds, and at the end of each round, the player's score is displayed. If the player finishes all eight rounds, they can choose to restart the game.
 The app includes accessibility features to support VoiceOver users. The prompt to "Tap the flag" and the name of each flag image are read out by VoiceOver.
 
+https://github.com/Ktamim98/guessFlagSwiftUI/assets/124142522/660e9534-9ed7-49e1-9cf5-52542099797b
+
 
 
 ## Features
